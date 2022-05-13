@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="stylesheets/calendar.css">
+</head>
+<body>
+ <div class="calendar">
+
+     <div class="calendar-header">
+<!--         year-->
+     <div class="year-picker" >
+         <div class="year-change" id="prev-year">
+         <p>&lt;</p>
+         </div>
+         <span id="year">2022</span>
+         <div class="year-change" id="next-year">
+             <p>&gt;</p>
+         </div>
+     </div>
+         <br>
+         <!--         month-->
+         <span class="month-picker" id="month-picker">February</span>
+
+        </div>
+        <div class="calendar-body">
+
+            <!-- date-->
+           <div class="calendar-week-day">
+               <div>SUN</div>
+               <div>MON</div>
+               <div>TUE</div>
+               <div>WED</div>
+               <div>THU</div>
+               <div>FRI</div>
+               <div>SAT</div>
+           </div>
+
+         <div class="calendar-days"></div>
+
+
+     </div>
+     <div class="month-list"></div>
+ </div>
+ <script src="javascripts/calendar.js"></script>
+</body>
+</html>

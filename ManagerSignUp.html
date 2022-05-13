@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheets/manager.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="javascripts/signup.js" defer></script>
+        <title>Aoligei-ManagerSignUp</title>
+    </head>
+    <body class="body1">
+      <main  id="app">
+        <div class="login-box" ref="signup">
+            <button class="login-buttom-a" onclick="window.location.href=('ManagerLogin.html')">Back to Login</button><br />
+            <h4 class="login-head">Manager Sign Up!</h4>
+            <p class="login-p">Your Email</p>
+            <input type="text" name="email" placeholder="Enter Email" v-model="email1">
+            <p v-if="email1 === ''"  class="reminder">Email can not be empty</p>
+            <p class="login-p">Username</p>
+            <input type="text" name="username" placeholder="Enter Username" v-model="username1">
+            <p v-if="username1 === ''"  class="reminder">Username can not be empty</p>
+            <p class="login-p">Password</p>
+            <input type="password" name="password" placeholder="Enter Password" v-model="password1"><br />
+            <p v-if="password1 === ''" class="reminder">Password can not be empty</p>
+            <p class="login-p">Confirm Password</p>
+            <input type="password" name="password" placeholder="Confirm Password" v-model="conpassword1"><br />
+            <p v-if="conpassword1 === ''"  class="reminder">Confirm Password can not be empty</p>
+            <button class="login-buttom-b" v-on:click="Check()">Sign Up</button><br />
+        </div>
+        <div class="login-box" ref="result" style="display: none;">
+            <h4 class="login-head">Congratulation!</h4>
+            <p>You have set up an account, back to Manager log in.</p>
+            <button class="login-buttom-a" onclick="window.location.href=('ManagerLogin.html')">Login</button><br />
+        </div>
+      </main>
+    </body>
+</html>

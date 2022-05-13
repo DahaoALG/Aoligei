@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="javascripts/login.js" defer></script>
+        <title>Aoligei-Login</title>
+    </head>
+    <body class="body1" >
+        <div class="login-box" id="app">
+            <h4 class="login-head">Welcome</h4>
+            <p class="login-p">Username</p>
+            <input type="text" name="username" placeholder="Enter Username" v-model="username2">
+            <p v-if="username2 === ''" class="reminder">Username can not be empty</p>
+            <p class="login-p">Password</p>
+            <input type="password" name="password" placeholder="Enter Password" v-model="password2"><br />
+            <p v-if="password2 === ''" class="reminder">Password can not be empty</p>
+            <button class="login-buttom-a" v-on:click="login()">Login</button><br />
+            <!-- should connect to the database use ajax, gonna achieve after learnning that -->
+            <button class="login-buttom-b" onclick="window.open('SignUp.html')">Sign Up</button><br />
+            <a href="index.html">Why this page shows up?</a><br />
+            <!--这里连到有course的界面，比如homepage-->
+        </div>
+    </body>
+</html>
